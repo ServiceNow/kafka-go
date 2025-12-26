@@ -237,7 +237,7 @@ func (t *Transport) grabPool(addr net.Addr) *connPool {
 	ctx, cancel := context.WithCancel(t.context())
 
 	p = &connPool{
-		refc: 2,
+		refc: 1,
 
 		dial:           t.dial(),
 		dialTimeout:    t.dialTimeout(),
